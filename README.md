@@ -27,7 +27,7 @@ This project was developed as a full-stack engineering solution and includes a c
 | Frontend    | Vue.js, Vue Router, CSS, Vitest, Docker                |
 | Backend     | Node.js, Express, MySQL, bcrypt, multer, nodemailer    |
 | AI Module   | Python, Flask, SentenceTransformers, Docker            |
-| DevOps      | Docker Compose, Git, GitHub                            |
+| DevOps      | Docker, Git, GitHub                            |
 
 ## 🏗️ Architecture
 
