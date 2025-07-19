@@ -1,0 +1,42 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    container_name: alquilapp-frontend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - red_alquilapp
+
+  backend:
+    build:
+      context: ./backend
+    container_name: alquilapp-backend
+    command: ["./wait-for-mysql.sh", "npm", "start"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    working_dir: /app
+    networks:
+      - red_alquilapp
+
+  ia:
+    build:
+      context: ./ia/entorno  # ✅ Cambia de ./ia/entorno a ./ia
+    container_name: alquilapp-ia
+    ports:
+      - "5000:5000"
+    volumes:
+       - ./ia/entorno:/app
+    networks:
+      - red_alquilapp
+
+networks:
+  red_alquilapp:
+    driver: bridge

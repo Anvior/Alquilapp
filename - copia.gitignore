@@ -1,0 +1,40 @@
+# === GLOBAL ===
+.env
+.DS_Store
+*.log
+*.sqlite3
+.vscode/
+coverage/
+__pycache__/
+*.py[cod]
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# === NODE (frontend y backend) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# === PYTHON (IA) ===
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+pip-log.txt
+
+# === VUE FRONTEND (dist output si haces build) ===
+dist/
+*.local
+
+# === DOCKER (por capas que no necesitas en control de versiones) ===
+**/Dockerfile
+**/.dockerignore
+
+# === GIT ===
+.git/
+.gitignore

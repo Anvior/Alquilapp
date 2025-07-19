@@ -1,0 +1,18 @@
+# Ignora dependencias instaladas (ya las instalas en Dockerfile)
+node_modules
+.venv
+__pycache__
+dist
+*.pyc
+
+# Ignora configuración local
+.env
+.DS_Store
+.vscode
+*.log
+coverage
+*.sqlite3
+
+# Ignora control de versiones y archivos grandes
+.git
+.gitignore
